@@ -12,7 +12,7 @@ The Taskboard System is designed to streamline the process of assigning, managin
     - Each task belongs to a distinct section within different groups.
     - Tasks are generated and made active only after the tasks of the previous group have been completed.
     - The first task is auto-created upon the initialization of the program.
-- API Specifications:
+- API/Function Specifications:
     - Get Active Tasks: Retrieve the list of currently active tasks that employees are working on.
     - Get All Tasks: Retrieve the complete list of tasks, including active, pending, and completed tasks.
     - Get Completed Tasks: Retrieve the list of tasks that have been completed by employees.
