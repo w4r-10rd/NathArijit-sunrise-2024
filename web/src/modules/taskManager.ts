@@ -12,22 +12,16 @@ export function initializeTasks() {
 }
 
 export function getActiveTasks(): Task[] {
-  const completedGroups = new Set<number>();
-
-  tasks.forEach(task => {
-    if (task.completed) {
-      completedGroups.add(task.group);
-    }
-  });
-
   let maxCompletedGroup = 0;
-  for (const group of completedGroups) {
-    if (group > maxCompletedGroup) {
-      maxCompletedGroup = group;
+
+  while (tasks.filter(task => task.group === maxCompletedGroup && !task.completed).length === 0) {
+    maxCompletedGroup++;
+    if (tasks.filter(task => task.group === maxCompletedGroup).length === 0) {
+      break;  
     }
   }
 
-  return tasks.filter(task => task.group <= maxCompletedGroup + 1 && !task.completed);
+  return tasks.filter(task => task.group <= maxCompletedGroup && !task.completed);
 }
 
 export function getCompletedTasks(): Task[] {

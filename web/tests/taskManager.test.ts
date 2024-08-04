@@ -45,7 +45,16 @@ describe('Task Manager', () => {
     expect(allTasks).toEqual(
       expect.arrayContaining([
         expect.objectContaining({ title: 'Initial Setup' }),
-        expect.objectContaining({ title: 'Basic Introduction' })
+        expect.objectContaining({ title: 'Basic Introduction' }),
+        expect.objectContaining({ title: 'Basic Git' }),
+        expect.objectContaining({ title: 'Git Collaboration' }),
+        expect.objectContaining({ title: 'JavaScript Basics' }),
+        expect.objectContaining({ title: 'JavaScript Project' }),
+        expect.objectContaining({ title: 'API Introduction' }),
+        expect.objectContaining({ title: 'API Consumption' }),
+        expect.objectContaining({ title: 'Final Project' }),
+        expect.objectContaining({ title: 'Project Presentation' })
+
       ])
     );
   });
